@@ -274,19 +274,29 @@ nav {
 .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; } .d3 { transition-delay:.3s; } .d4 { transition-delay:.4s; }
 
 /* ── MOBILE ── */
-/* ── MOBILE ── */
 @media(max-width:860px) {
-  nav { padding:0 1.5rem; }
+  nav { padding:0 1.25rem; }
   .nav-links { display:none; }
-  .section { padding:5rem 1.5rem; }
-  .two-col, .three-col { grid-template-columns:1fr; gap:2.5rem; }
-  .stat-block { grid-template-columns:1fr 1fr; gap:2rem; }
-  .big-head { font-size:clamp(2rem,9vw,3.5rem); margin-bottom:2.5rem; }
-  .tl-item { grid-template-columns:4.5rem 1fr; gap:1.25rem; }
-  #connect { padding:4rem 1.5rem; }
-  .social-row { gap:2rem; }
+  .section { padding:4rem 1.25rem; }
+  .two-col, .three-col { grid-template-columns:1fr; gap:2rem; }
+  .two-col > div { min-width:0; width:100%; }
+  .stat-block { grid-template-columns:repeat(3,1fr); gap:.75rem; }
+  .stat-n { font-size:1.6rem; }
+  .stat-l { font-size:9px; }
+  .big-head { font-size:clamp(1.8rem,8vw,3rem); margin-bottom:2rem; }
+  .tl-item { grid-template-columns:4rem 1fr; gap:1rem; }
+  #connect { padding:4rem 1.25rem; }
+  .social-row { gap:1.5rem; flex-wrap:wrap; justify-content:center; }
   .diagonal-top, .diagonal-top-reverse { clip-path:none; margin-top:0; padding-top:0; }
-  .quote-break { clip-path:none; padding:4rem 1.5rem; }
+  .quote-break { clip-path:none; padding:3rem 1.25rem; }
+  .body-text { max-width:100%; font-size:1rem; }
+  .hero-content { padding:0 1.25rem; max-width:100%; }
+  .section-inner { width:100%; max-width:100%; }
+  .pull-quote { margin-top:1.5rem; }
+  .tag-row { gap:.35rem; }
+  .tag { font-size:9px; padding:.35em .75em; }
+  .role-pill { font-size:9px; padding:.35em .85em; }
+}
 
 <!-- NAV -->
 <nav>
@@ -329,7 +339,7 @@ nav {
 <section class="section white diagonal-top" style="padding-top:8rem;">
   <div class="section-inner" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
     <div class="reveal">
-      <p style="font-size:clamp(1.3rem,2.5vw,1.9rem); font-weight:300; line-height:1.55; color:var(--mid); max-width:780px;">
+      <p style="font-size:clamp(1.3rem,2.5vw,1.9rem); font-weight:300; line-height:1.55; color:var(--mid); max-width:min(780px,100%)">
         Currently scaling my sixth company, <strong>
           <a href="https://wisy.ai" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">wisy.ai</a>
         </strong>, 
@@ -443,7 +453,7 @@ nav {
 <section id="crypto" class="section off diagonal-top-reverse">
   <div class="section-inner">
     <div class="s-label reveal"><span class="s-num">03</span><span class="s-tag">Crypto Native</span><span class="s-line"></span></div>
-    <h2 class="big-head reveal d1">Blockchain <br>trust but <br><em>verify.</em></h2>
+    <h2 class="big-head reveal d1">Blockchain <br>trust but <em>verify.</em></h2>
     <div class="two-col">
       <div>
         <p class="body-text reveal d1">David identifies as a <strong>"Satoshian"</strong> — fully embracing the fundamentals of blockchain including trust, transparency, and privacy.</p>
